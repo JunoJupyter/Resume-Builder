@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto+Mono&family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.form-heading {
+  width: 100%;
+  height: 15vh;
+  background-color: #008080;
+  color: #ffffff;
+  display: flex;
+  font-size: 3.8vw;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+#template {
+  width: 25vw;
+  height: 28vw;
+}
+
+#template:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  margin-left: 2%;
+  margin-right: 2%;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.selectedImage {
+  transition-duration: 30ms;
+  border: 5px solid #00b5ad;
+  border-radius: 10px;
+}
+
+.templates_container {
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  justify-content: space-around;
+}
+
+.pinfoheading {
+  width: 100vw;
+  font-size: 2.5vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-left: -8%;
+}
+
+.templateEnd {
+  width: 100vw;
+  display: flex;
+  margin-bottom: 3%;
+  justify-self: center;
+  align-self: center;
+  border: 1px solid rgb(110, 106, 106);
+}
+
+.innertemplateEnd {
+  width: 60vw;
+  display: flex;
+  margin-bottom: 5%;
+  margin-left: 2%;
+  justify-self: center;
+  align-self: center;
+  border: 1px dotted rgb(188, 184, 184);
+}
+
+.label {
+  font-size: 1.4vw;
+}
+
+.form-div {
+  margin: 7% 5% 10% 8%;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.inputfield1 {
+  margin: 2%;
+  color: rgb(88, 84, 84);
+  font-size: 1.6vw;
+  font-family: "Space Grotesk";
+  border: 1.5px solid rgba(167, 160, 160, 0.598);
+  border-radius: 5px;
+  height: 3vw;
+  width: 30vw;
+  padding: 0px 5px 0px 5px;
+}
+
+.inputfield-textarea {
+  margin: 2%;
+  font-size: 1.6vw;
+  font-family: "Space Grotesk";
+  border: 1.5px solid rgba(167, 160, 160, 0.598);
+  border-radius: 5px;
+  height: fit-content;
+  width: 30vw;
+  padding: 0px 5px 0px 5px;
+}
+
+label {
+  margin-left: 2%;
+  font-weight: 600;
+}
+
+.errormessage {
+  font-size: small;
+  color: red;
+  margin-top: -1%;
+  margin-left: 9%;
+}
+
+.addskillbtn,
+.removeSkillbtn {
+  font-size: 1.5vw;
+  width: fit-content;
+  padding: 0.5% 2%;
+  border: 1px solid #008cba;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #008cba;
+  box-shadow: 4px 4px 4px #212121;
+  color: #fff;
+  cursor: pointer;
+}
+
+.addskillbtn {
+  margin-left: 2%;
+  padding: 0.8% 2%;
+}
+
+.addskillbtn:hover,
+.addEdubtn:hover,
+.rmAchbtn:hover,
+.addAchbtn:hover,
+.addExpbtn:hover,
+.removeSkillbtn:hover,
+.rmEdubtn:hover,
+.rmExpbtn:hover,
+.removeSkillbtn:hover {
+  transition-duration: 300ms;
+  transform: translate(6%, 8%);
+  box-shadow: 2px 2px 4px #212121;
+}
+
+.addEdubtn {
+  font-size: 1.5vw;
+  width: fit-content;
+  padding: 0.8% 2%;
+  border: 1px solid #008cba;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #008cba;
+  box-shadow: 4px 4px 4px #212121;
+  color: #fff;
+  cursor: pointer;
+}
+
+.addEdubtn {
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+.rmEdubtn,
+.rmExpbtn,
+.removeSkillbtn {
+  font-size: 1.2vw;
+  width: fit-content;
+  height: 3vw;
+  padding: 0.8% 2%;
+  border: 1px solid #008cba;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #008cba;
+  box-shadow: 4px 4px 4px #212121;
+  color: #fff;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.addExpbtn {
+  font-size: 1.5vw;
+  width: fit-content;
+  padding: 0.8% 2%;
+  border: 1px solid #008cba;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #008cba;
+  box-shadow: 4px 4px 4px #212121;
+  color: #fff;
+  cursor: pointer;
+}
+
+.addExpbtn {
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+.rmAchbtn,
+.addAchbtn {
+  font-size: 1.5vw;
+  width: fit-content;
+  padding: 1% 2%;
+  border: 1px solid #008cba;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #008cba;
+  box-shadow: 4px 4px 4px #212121;
+  color: #fff;
+  cursor: pointer;
+}
+
+.addAchbtn {
+  margin-left: 2%;
+  cursor: pointer;
+  margin-left: 42%;
+}
+
+.rmAchbtn {
+  margin-top: 3%;
+  margin-left: 1%;
+}
+
+.dynamic-field-str {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.submitbtn {
+  font-size: 1.6vw;
+  width: fit-content;
+  padding: 1% 2.5%;
+  border: 1px solid #e84393;
+  border-radius: 6px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #e84393;
+  box-shadow: 4px 4px 4px #212121;
+  color: #ffffff;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.submitbtn:hover {
+  transition-duration: 300ms;
+  transform: scale(1.1);
+  box-shadow: 2px 2px 4px #212121;
+
+}
+
+.field-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  gap: 2vw; /* Adjust the gap between the fields using viewport width (vw) */
+  justify-content: center;
+}
+
+.field-container > div {
+  flex-basis: calc(
+    50% - 1vw
+  ); /* Each div takes 50% of the container width minus a small gap  */
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 5vw;
+  border-radius: 13px;
+}
+
+.popup-inner p {
+  margin-bottom: 2vh;
+}
+
+.popup-inner button {
+  padding: 2vh 4vw;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loading-spinner {
+  width: 4vw;
+  height: 4vw;
+  border: 2px solid #007bff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.popup-cross {
+  position: relative;
+  display: flex;
+  align-self: flex-end;
+  margin-right: -3vw;
+  top: -3vw;
+  z-index: 2;
+  cursor: pointer;
+}
