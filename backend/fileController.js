@@ -84,11 +84,11 @@ export const dataUpload = async (req, res) => {
 
   let templateFilePath;
   if (template_id === "1") {
-    templateFilePath = "./Templates/BasicTemplate.docx";
+    templateFilePath = "../Templates/BasicTemplate.docx";
   } else if (template_id === "2") {
-    templateFilePath = "./Templates/LinkTemplate.docx";
+    templateFilePath = "../Templates/LinkTemplate.docx";
   } else if (template_id === "3") {
-    templateFilePath = "./Templates/ImageTemplate.docx";
+    templateFilePath = "../Templates/ImageTemplate.docx";
   } else {
     return res.status(404).json({ error: `Invalid Template ID: ${template_id}, Template Not Found!` });
   }
