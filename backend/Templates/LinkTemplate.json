@@ -1,0 +1,44 @@
+{
+  "Name": "Lorem",
+  "LastName": "ipsum",
+  "EmailAddress": "ipsum@abc.com",
+  "PhoneNumber": "+91 99xx14xx99",
+  "LinkedIn": "<a href=\"https://www.linkedin.com\">linkedIn</a>",
+  "JobTitle": "Software Development Engineer",
+  "Summary" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.",
+  "Skills": [
+    "Java", 
+    "ReactJs",
+    "Strong interpersonal & communication skills"
+  ],
+  "Education": [
+    {
+      "SchoolName": "School",
+      "Year": "201X-201Y",
+      "Description" : "There are many variations of passages of <a href=\"https://www.google.com\">Lorem Ipsum</a> available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+    },
+    {
+      "SchoolName": "College",
+      "Year": "203X-203Y",
+      "Description" : "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable."
+    }
+  ],
+  
+  "Experience": [
+    {
+      "CompanyName": "Adobe",
+      "Year": "201X-201Y",
+      "Description" : "It is a long <a href=\"https://www.adobe.com\">established</a> fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    }
+  ],
+  "Achievements": [
+    {
+      "Type" : "Academics",
+      "Description" : "<a href=\"https://www.google.com\">Institute</a> Topper"
+    },
+    {
+      "Type" : "Sports",
+      "Description" : "Gold Medalist in <a href=\"https://www.adobe.com\">Long Jump</a> "
+    }
+  ]
+}
