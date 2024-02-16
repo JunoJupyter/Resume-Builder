@@ -1,7 +1,8 @@
 import generatePDF from "./PdfGenerator.js";
-import fs from 'fs';
-export const dataUpload = async (req, res) => {
+import fs from "fs";
+import { Buffer } from "buffer";
 
+export const dataUpload = async (req, res) => {
   // Storing the form data in the variables as required in the JSON to be used for Document Generation API
 
   const {
@@ -15,17 +16,16 @@ export const dataUpload = async (req, res) => {
     achievements,
   } = req.body;
 
-
   // Checking template validation
 
   const validTemplateIds = ["1", "2", "3"];
   if (!validTemplateIds.includes(template_id)) {
-
     // Error Code: 404 --> Template not found
 
-    return res.status(404).json({ error: `Template not found! Invalid Template: ${template_id}` });
+    return res
+      .status(404)
+      .json({ error: `Template not found! Invalid Template: ${template_id}` });
   }
-
 
   // Destructuring the personal information array received from request, to get required details
 
@@ -52,8 +52,7 @@ export const dataUpload = async (req, res) => {
   const { name, last_name, email_address, phone_number, linkedin_url } =
     personal_information;
 
-
-    // Creating the JSON object to be used in Document Generation API
+  // Creating the JSON object to be used in Document Generation API
 
   const transformedJson = {
     Name: name,
@@ -80,8 +79,6 @@ export const dataUpload = async (req, res) => {
     })),
   };
 
-  let outputFile = `./output/cv.pdf`;
-
   let templateFilePath;
   if (template_id === "1") {
     templateFilePath = "../Templates/BasicTemplate.docx";
@@ -90,27 +87,32 @@ export const dataUpload = async (req, res) => {
   } else if (template_id === "3") {
     templateFilePath = "../Templates/ImageTemplate.docx";
   } else {
-    return res.status(404).json({ error: `Invalid Template ID: ${template_id}, Template Not Found!` });
+    return res
+      .status(404)
+      .json({
+        error: `Invalid Template ID: ${template_id}, Template Not Found!`,
+      });
   }
-
 
   // Calling function to start Resume Creation
 
-  generatePDF(templateFilePath, transformedJson, outputFile)
-  .then((output_path) => {
-    console.log("PDF generated successfully");
-    
-    const pdfData = fs.readFileSync(outputFile);
+  await generatePDF(templateFilePath, transformedJson, outputFile)
+    .then((output_path) => {
+      console.log("PDF generated successfully");
 
-    // Set the appropriate headers for the response
-    res.setHeader('Content-Disposition', 'attachment; filename=cv.pdf');
-    res.setHeader('Content-Type', 'application/pdf');
+      let outputFile = `./output/cv.pdf`;
 
-    // Send the PDF file as the response
-    res.send(pdfData);
-  })
-  .catch((error) => {
-    console.error("PDF generation failed:", error);
-    return res.status(401).json({ error: "Unauthorised" });
-  });  
+      const pdfData = fs.readFileSync(outputFile);
+
+      // Set the appropriate headers for the response
+      res.setHeader("Content-Disposition", "attachment; filename=cv.pdf");
+      res.setHeader("Content-Type", "application/pdf");
+
+      // Send the PDF file as the response
+      res.send(pdfData);
+    })
+    .catch((error) => {
+      console.error("PDF generation failed:", error);
+      return res.status(401).json({ error: "Unauthorised" });
+    });
 };
